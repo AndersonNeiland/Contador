@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #1f2937;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilizando o botão */
+#pauseButton {
+    background-color: #00b3f0; /* Cor de fundo suave (vermelho claro) */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 25px; /* Borda arredondada */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Mostra o cursor de mão para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    margin: 20px; /* Margem ao redor do botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+#pauseButton:hover {
+    background-color:#00b3f0; /* Cor do fundo ao passar o mouse (vermelho mais escuro) */
+}
+
+
+h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+    color: #ffffff; /* Cor romântica para o título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o texto */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #ffffff; /* Cor romântica para o título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o texto */
+}
+
+/* Contêiner do contador */
+#contador-container {
+    display: flex;
+    justify-content: space-evenly; /* Espaço igual entre os elementos */
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha em telas menores */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+}
+
+/* Contêiner do contador */
+#contador-container {
+    display: flex;
+    justify-content: space-evenly; /* Espaço igual entre os elementos */
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha em telas menores */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+    
+}
+
+/* Estilo dos cards do contador */
+.contador-card {
+    background-color: #ff6f70;
+    color: black;
+    padding: 20px;
+    border-radius: 15px; /* Borda mais arredondada para um visual mais suave */
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1 1 15px; /* Cada card vai ter um tamanho mínimo de 150px e vai se expandir igualmente */
+    min-width: 150px; /* Garante que os cards não fiquem menores que 150px */
+    max-width: 300px; /* Limita a largura máxima do card */
+    text-align: center; /* Centraliza o texto dentro do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor dos cards */
+}
+
+/* Responsividade para telas menores (dispositivos móveis) */
+@media (max-width: 768px) {
+    #contador-container {
+        flex-direction: column; /* Coloca os cards de contador um abaixo do outro */
+        align-items: center; /* Centraliza os itens */
+        padding: 0 15px; /* Adiciona um pequeno padding para dispositivos móveis */
+    }
+
+    .contador-card {
+        width: 100%; /* Faz os cards ocuparem toda a largura disponível em telas pequenas */
+        margin-bottom: 15px; /* Espaço entre os cards */
+        padding: 15px; /* Diminui o padding para um visual mais compacto */
+        font-size: 16px; /* Ajusta o tamanho da fonte para ficar mais equilibrado */
+        border-radius: 20px; /* Deixa os cards mais arredondados */
+    }
+}
+
+
+.swiper {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajuste para exibir a imagem inteira */
+}
+
+audio {
+    display: none;
+}
+
+/* Corações */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    bottom: -30px; /* Faz os corações nascerem abaixo da tela */
+    animation: float 4s linear infinite;
+}
+
+@keyframes moveHeart {
+    0% {
+        bottom: -50px; /* Posição inicial fora da tela */
+    }
+    100% {
+        bottom: 100vh; /* Posição final no topo da tela */
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.8;
+    animation: moveHeart linear infinite; /* Aplique a animação */
+}
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #contador-container {
+        flex-direction: column; /* Coloca um contador abaixo do outro */
+        align-items: center;
+    }
+}

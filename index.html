@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anderson & Mirian</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+</head>
+
+<body>
+
+    <h1>❤️Anderson & Mirian❤️</h1>
+    
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/foto01.jpg" alt="Foto 1"></div>
+            <div class="swiper-slide"><img src="img/foto02.jpg" alt="Foto 2"></div>
+            <div class="swiper-slide"><img src="img/foto03.jpg" alt="Foto 3"></div>
+            <div class="swiper-slide"><img src="img/foto04.jpg" alt="Foto 3"></div>
+            <div class="swiper-slide"><img src="img/foto05.jpg" alt="Foto 3"></div>
+            <div class="swiper-slide"><img src="img/foto06.jpg" alt="Foto 3"></div>
+            <div class="swiper-slide"><img src="img/foto07.jpg" alt="Foto 3"></div>
+            <div class="swiper-slide"><img src="img/foto08.jpg" alt="Foto 3"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <p>❤️ Estamos juntos há: ❤️</p>
+
+    <div id="contador-container">
+        <div class="contador-card" id="anos">0 Anos</div>
+        <div class="contador-card" id="meses">0 Meses</div>
+        <div class="contador-card" id="dias">0 Dias</div>
+        <div class="contador-card" id="horas">0 Horas</div>
+        <div class="contador-card" id="minutos">0 Minutos</div>
+        <div class="contador-card" id="segundos"></div>
+    </div>
+
+    <button id="pauseButton">Pausar Música</button>
+
+
+    <audio id="musica" autoplay loop>
+        <source src="audio/Jorge _ Mateus - Pra Sempre Com Você.mp3" type="audio/mp3">
+    </audio>
+
+    <div id="hearts-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+    var swiper = new Swiper(".swiper", {
+        loop: true, // Permite que as imagens se repitam
+        autoplay: {
+        delay: 2000, // Tempo de cada transição (3 segundos)
+        disableOnInteraction: false, // Permite continuar o autoplay mesmo com interação do usuário
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+    });
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
