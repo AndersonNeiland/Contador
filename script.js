@@ -1,5 +1,5 @@
 function calcularTempo() {
-    const dataInicio = new Date("2024-12-30"); // Data do namoro
+    const dataInicio = new Date("2024-12-28"); // Data do namoro
     const agora = new Date();
     const diff = agora - dataInicio;
 
